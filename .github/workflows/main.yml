@@ -2,6 +2,16 @@ name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
+  Linux:
+    runs-on: self-hosted
+    steps:
+        - uses: actions/checkout@v2
+        - name: Run script file
+          run: |
+             id
+             pwd
+             ls
+          shell: bash
   Explore-GitHub-Actions:
     runs-on: self-hosted
     steps:
